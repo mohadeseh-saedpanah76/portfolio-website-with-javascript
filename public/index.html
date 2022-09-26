@@ -8,6 +8,9 @@
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
+     <!--=============== SWIPER CSS ===============-->
+     <link rel="stylesheet" href="/src/css/swiper-bundle.min.css">
+
     <!--============ CSS =============-->
     <link rel="stylesheet" href="/src/css/style.css">
 
@@ -28,7 +31,7 @@
                         <a href="#about" class="nav__link"><i class='bx bx-user'></i></a>
                     </li>
                     <li class="nav__item">
-                        <a href="#skill" class="nav__link"><i class='bx bx-book'></i></a>
+                        <a href="#skills" class="nav__link"><i class='bx bx-book'></i></a>
                     </li>
                     <li class="nav__item">
                         <a href="#work" class="nav__link"><i class='bx bx-briefcase-alt-2'></i></a>
@@ -517,12 +520,114 @@
 
         <!--=========== Testimonail ============-->
         <section class="testimonail section">
+            <span class="section__subtitle">
+                My clients say 
+            </span>
+            <h2 class="section__title">
+                Testimonail
+            </h2>
 
+            <div class="testimonail__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonail__card swiper-slide">
+                        <img src="/img/testimonial1.png" alt="" class="testimonail__img">
+                        <h3 class="testimonail__title">Jhon Doe</h3>
+                        <p class="testimonail__description">
+                            A really good job, all aspects of the project were
+                            followed step by step and with good result.
+                        </p>
+                    </div>
+                    <div class="testimonail__card swiper-slide">
+                        <img src="/img/testimonial2.png" alt="" class="testimonail__img">
+                        <h3 class="testimonail__title">Paula Vusy</h3>
+                        <p class="testimonail__description">
+                            A really good job, all aspects of the project were
+                            followed step by step and with good result.
+                        </p>
+                    </div>
+                    <div class="testimonail__card swiper-slide">
+                        <img src="/img/testimonial3.png" alt="" class="testimonail__img">
+                        <h3 class="testimonail__title">Sara Cill</h3>
+                        <p class="testimonail__description">
+                            A really good job, all aspects of the project were
+                            followed step by step and with good result.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
         <!--=========== Contact ============-->
         <section class="contact section" id="contact">
+            <span class="section__subtitle">
+                Get in touch
+            </span>
 
+            <h2 class="section__title">
+                Contact Me
+            </h2>
+
+            <div class="Contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title">Talk to me</h3>
+    
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">user@gmail.com</span>
+    
+                            <a href="mailto:examplemail@correo.com" class="contact__button" target="_blank">
+                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">999-888-777</span>
+    
+                            <a href="https://api.whatsapp.com/send?phone=989192533813&text=Hello, more iformation!" class="contact__button" target="_blank">
+                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="contact__card">
+                            <i class='bx bxl-messenger contact__card-icon'></i>
+                            <h3 class="contact__card-title">Messenger</h3>
+                            <span class="contact__card-data">user.fb123</span>
+    
+                            <a href="https://m.me/bedimcode" class="contact__button" target="_blank">
+                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="contact__content">
+                    <h3 class="contact__title">Write me your project</h3>
+
+                    <form action="#" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" class="contact__form-input" placeholder="Insert your name">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="email" class="contact__form-input" placeholder="Insert your email">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="" class="contact__form-tag">Project</label>
+                            <textarea name="" id="" cols="30" rows="10" class="contact__form-input" placeholder="write your project"></textarea>
+                        </div>
+
+                        <button class="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -571,8 +676,12 @@
     </footer>
 
     
+    <!--============ SWIPER ============-->
+    <script src="/src/js/swiper-bundle.min.js"></script>
+    
     <!--============ MIXITUP JS ============-->
     <script src="/src/js/mixitup.min.js"></script>
+
     <!--============ APP JS ============-->
     <script src="/src/js/app.js"></script>
 </body>
