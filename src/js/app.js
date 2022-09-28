@@ -163,3 +163,17 @@ themeButton.addEventListener('click', ()=>{
    localStorage.setItem('selectedTheme' , getCurrentTheme())
    localStorage.setItem('selectedIcon' , getCurrentIcon())
 })
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+   origin: 'top',
+   distance :'60px',
+   duration: 2500,
+   delay : 400,
+})
+
+sr.reveal('.home__data')
+sr.reveal('.home__social , .home__scroll' , {origin:'bottom' , delay:900})
+sr.reveal('.home__handle', {delay:700})
