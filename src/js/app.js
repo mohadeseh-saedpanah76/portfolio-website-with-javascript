@@ -125,3 +125,41 @@ function activeLink (){
 navLink.forEach((item)=>{
    item.addEventListener('click' , activeLink)
 })
+
+
+/*============ LIGHT & DARK THEME ========== */
+//  برای تغییر تم و ذخیره ی تغییرات تم سایت
+
+const themeButton = document.getElementById('theme-button')
+const body = document.querySelector('body')
+const lightTheme = 'light-theme'
+const iconTheme = 'bx-sun'
+
+//  اگر قبلا تم و آیکونی توسط کاربر انتخاب شده باشد از لوکال استورج گرفته میشود
+// تا هنگام ورود کاربر همان تم انتخاب شده نمایش داده شود
+
+const selectedTheme = localStorage.getItem('selectedTheme')
+const selectedIcon = localStorage.getItem('selectedIcon')
+
+
+// حال باید توسط توابع تم و آیکون فعلی وبسایت گرفته شود
+const getCurrentTheme = () => body.classList.contains(lightTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+
+
+//براساس تمی که قبلا کاربر انتخاب کرده است تم جدید انتخاب می شود
+if(selectedTheme){
+   body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
+   themeButton.classList[selectedIcon ==='bx bx-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+
+//  فعال کردن یا غیر فعال کردن تم با کلیک روی آیکون
+themeButton.addEventListener('click', ()=>{
+   body.classList.toggle(lightTheme)
+   themeButton.classList.toggle(iconTheme)
+
+   //حال باید تم و آیکونی که انتخاب شده است را در لوکال استورج ذخیره کنیم
+   localStorage.setItem('selectedTheme' , getCurrentTheme())
+   localStorage.setItem('selectedIcon' , getCurrentIcon())
+})
